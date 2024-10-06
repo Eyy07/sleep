@@ -1,0 +1,63 @@
+.sidebar-icons {
+    position: fixed;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+    display: none;
+}
+
+.sidebar-icons.active {
+    left: 0;
+    display: block;
+}
+
+#toggleSidebar {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#toggleSidebar:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+#toggleSidebar:active {
+    background-color: #004080;
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .sidebar-icons {
+        top: 40%;
+    }
+
+    #toggleSidebar {
+        top: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-icons {
+        top: 30%;
+    }
+
+    #toggleSidebar {
+        top: 30%;
+    }
+}
